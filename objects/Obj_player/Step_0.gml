@@ -23,6 +23,6 @@ else
         sprite_index = spr_player_idle_left;
     else if (sprite_index == spr_player_walk_up)
         sprite_index = spr_player_idle_up;
-    else if (sprite_index == spr_player_idle_down)
+    else if (sprite_index == spr_player_walk_down)
         sprite_index = spr_player_idle_down;
 }
