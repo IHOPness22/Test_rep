@@ -1,9 +1,14 @@
-var gui_w = display_get_gui_width();
-var gui_h = display_get_gui_height();
+var w = display_get_gui_width();
+var h = display_get_gui_height();
 
-// Convert our float frame value to an integer subimage index
+// draw your sprite full screen
 var subimg = clamp(floor(frame), 0, frame_count - 1);
+draw_sprite_stretched(spr, subimg, 0, 0, w, h);
 
-// Stretch your sprite to the full GUI size
-draw_sprite_stretched(spr, subimg, 0, 0, gui_w, gui_h);
+// black overlay (EarthBound fade-to-black)
+draw_set_color(c_black);
+draw_set_alpha(alpha);
+draw_rectangle(0, 0, w, h, false);
+draw_set_alpha(1);
+
 

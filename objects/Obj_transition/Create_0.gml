@@ -1,17 +1,28 @@
-spr = spr_transition;
+persistent = true;
 
-frame_count = sprite_get_number(spr);
-
-frame = 0;
-
-frame_speed = 0.5;
-
-// States for fade
 enum TRANSITION_STATE {
     OUT,
+    WAIT,
     IN
 }
 
 state = TRANSITION_STATE.OUT;
 
-//audio_play_sound(snd_transition_jingle, 1, false);
+// your sprite
+spr = spr_transition;
+frame_count = sprite_get_number(spr);
+
+// animation frame
+frame = 0;
+
+// how fast your sprite animates (adjust this!)
+frame_speed = 0.2;
+
+// black fade alpha
+alpha = 0;
+fade_speed_out = 0.02; 
+fade_speed_in  = 0.02;
+
+target_room = noone;
+
+audio_play_sound(Enter_battle, 1, false);
