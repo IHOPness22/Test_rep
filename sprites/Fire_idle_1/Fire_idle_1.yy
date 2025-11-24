@@ -31,15 +31,15 @@
   "name":"Fire_idle_1",
   "nineSlice":{
     "$GMNineSliceData":"",
-    "bottom":0,
-    "enabled":false,
+    "bottom":12,
+    "enabled":true,
     "guideColour":[4294902015,4294902015,4294902015,4294902015,],
     "highlightColour":1728023040,
     "highlightStyle":0,
-    "left":0,
+    "left":1,
     "resourceType":"GMNineSliceData",
     "resourceVersion":"2.0",
-    "right":0,
+    "right":8,
     "tileMode":[
       0,
       0,
@@ -47,7 +47,7 @@
       0,
       0,
     ],
-    "top":0,
+    "top":3,
   },
   "origin":0,
   "parent":{
