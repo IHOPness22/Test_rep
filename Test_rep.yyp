@@ -36,6 +36,7 @@
   },
   "name":"Test_rep",
   "resources":[
+    {"id":{"name":"Obj_battle","path":"objects/Obj_battle/Obj_battle.yy",},},
     {"id":{"name":"Obj_enemy","path":"objects/Obj_enemy/Obj_enemy.yy",},},
     {"id":{"name":"Obj_fire","path":"objects/Obj_fire/Obj_fire.yy",},},
     {"id":{"name":"Obj_player","path":"objects/Obj_player/Obj_player.yy",},},
