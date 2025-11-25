@@ -5,3 +5,4 @@ global.can_move = true;
 player_data = src_player_stats();
 holding_weapon = player_data.has_weapon;
 
+holding_weapon = true;

@@ -6,7 +6,8 @@ if (global.can_move == true) {
 
 
 
-
+//Movement for when player is not holding a weapon 
+    
 if (_hor != 0 or _ver != 0 and holding_weapon == false)
 {
     if (_ver > 0) 
@@ -30,6 +31,18 @@ else if  (_hor == 0 or _ver == 0 and holding_weapon == false)
     else if (sprite_index == spr_player_walk_down)
         sprite_index = spr_player_idle_down;
 }
+
+//movement for when player is holding a weapon  
+if (_hor != 0 or _ver != 0 and holding_weapon == true) {
+    point_direction(x, y, mouse_x, mouse_y);  
+    
+    
+}     
+    
+    
+    
+    
+    
 }
 
 //double check to make sure player doesn't move during transition and fixes frames
