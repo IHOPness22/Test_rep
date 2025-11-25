@@ -8,7 +8,7 @@ if (global.can_move == true) {
 
 //Movement for when player is not holding a weapon 
     
-if (_hor != 0 or _ver != 0 and holding_weapon == false)
+if (_hor != 0 or _ver != 0 and !holding_weapon)
 {
     if (_ver > 0) 
         sprite_index = spr_player_walk_down;
@@ -20,7 +20,7 @@ if (_hor != 0 or _ver != 0 and holding_weapon == false)
         sprite_index = spr_player_walk_left;
          
 }
-else if  (_hor == 0 or _ver == 0 and holding_weapon == false)
+else if  (_hor == 0 or _ver == 0 and !holding_weapon)
 {
 	if (sprite_index == spr_player_walk_right)
         sprite_index = spr_player_idle_right;
@@ -33,9 +33,16 @@ else if  (_hor == 0 or _ver == 0 and holding_weapon == false)
 }
 
 //movement for when player is holding a weapon  
-if (_hor != 0 or _ver != 0 and holding_weapon == true) {
+if (_hor != 0 or _ver != 0 and holding_weapon) {
     point_direction(x, y, mouse_x, mouse_y);  
-    
+    if(image_angle >= 0 and image_angle < 90)
+		sprite_index = spr_player_walk_right;
+	if(image_angle >= 90 and image_alpha < 180)
+		sprite_index = spr_player_walk_up;
+	if(image_alpha >= 180 and image_alpha < 270)
+		sprite_index = spr_player_walk_left;
+	if(image_alpha >= 270 and image_alpha <= 360)
+		sprite_index = spr_player_walk_down;
     
 }     
     
