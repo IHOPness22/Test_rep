@@ -1,4 +1,5 @@
 //----------------------PLAYER MOVEMENT----------------------------
-move_speed = 1;
 tilemap = layer_tilemap_get_id("Tiles_Col");
+move_speed = 2;
+global.can_move = true;
 

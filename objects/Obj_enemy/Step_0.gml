@@ -11,6 +11,7 @@ else {
 }
 
 if (dist <= stop_radius) {
+    global.can_move = false;
      if (!instance_exists(Obj_transition)) {
         var t = instance_create_layer(x, y, "Instances", Obj_transition);
         t.target_room = battle_room;

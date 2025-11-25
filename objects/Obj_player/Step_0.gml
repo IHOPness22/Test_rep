@@ -1,7 +1,11 @@
-var _hor = keyboard_check(ord("D")) - keyboard_check(ord("A"));
-var _ver = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 
-move_and_collide(_hor * move_speed, _ver * move_speed, tilemap, undefined, undefined, move_speed, move_speed);
+if (global.can_move == true) {
+    var _hor = keyboard_check(ord("D")) - keyboard_check(ord("A"));
+    var _ver = keyboard_check(ord("S")) - keyboard_check(ord("W"));
+    move_and_collide(_hor * move_speed, _ver * move_speed, tilemap, undefined, undefined, move_speed, move_speed);
+
+
+
 
 if (_hor != 0 or _ver != 0)
 {
@@ -25,4 +29,12 @@ else
         sprite_index = spr_player_idle_up;
     else if (sprite_index == spr_player_walk_down)
         sprite_index = spr_player_idle_down;
+}
+}
+
+//double check to make sure player doesn't move during transition and fixes frames
+if (!global.can_move) {
+    image_speed = 0;
+} else {
+    image_speed = 1;
 }

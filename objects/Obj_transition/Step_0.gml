@@ -26,6 +26,7 @@ switch (state) {
     case TRANSITION_STATE.IN:
         frame -= frame_speed;
         alpha -= fade_speed_in;   // fade back in
+        global.can_move = true;
 
         if (frame <= 0) {
             frame = 0;
