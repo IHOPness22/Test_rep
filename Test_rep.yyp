@@ -37,6 +37,7 @@
   },
   "name":"Test_rep",
   "resources":[
+    {"id":{"name":"Obj_collectible","path":"objects/Obj_collectible/Obj_collectible.yy",},},
     {"id":{"name":"Obj_enemy","path":"objects/Obj_enemy/Obj_enemy.yy",},},
     {"id":{"name":"Obj_fire","path":"objects/Obj_fire/Obj_fire.yy",},},
     {"id":{"name":"Obj_game","path":"objects/Obj_game/Obj_game.yy",},},
@@ -48,6 +49,7 @@
     {"id":{"name":"Cursor_script","path":"scripts/Cursor_script/Cursor_script.yy",},},
     {"id":{"name":"Battle_music_1","path":"sounds/Battle_music_1/Battle_music_1.yy",},},
     {"id":{"name":"Enter_battle","path":"sounds/Enter_battle/Enter_battle.yy",},},
+    {"id":{"name":"Chest","path":"sprites/Chest/Chest.yy",},},
     {"id":{"name":"enemy_1","path":"sprites/enemy_1/enemy_1.yy",},},
     {"id":{"name":"Fire_idle_1","path":"sprites/Fire_idle_1/Fire_idle_1.yy",},},
     {"id":{"name":"Fire_Idle_2","path":"sprites/Fire_Idle_2/Fire_Idle_2.yy",},},
