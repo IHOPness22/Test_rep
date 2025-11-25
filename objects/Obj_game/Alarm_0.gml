@@ -1,0 +1,1 @@
+audio_play_sound(Battle_music_1, 1, false);

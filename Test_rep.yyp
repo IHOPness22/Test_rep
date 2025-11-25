@@ -39,10 +39,12 @@
   "resources":[
     {"id":{"name":"Obj_enemy","path":"objects/Obj_enemy/Obj_enemy.yy",},},
     {"id":{"name":"Obj_fire","path":"objects/Obj_fire/Obj_fire.yy",},},
+    {"id":{"name":"Obj_game","path":"objects/Obj_game/Obj_game.yy",},},
     {"id":{"name":"Obj_player","path":"objects/Obj_player/Obj_player.yy",},},
     {"id":{"name":"Obj_transition","path":"objects/Obj_transition/Obj_transition.yy",},},
     {"id":{"name":"battle_room","path":"rooms/battle_room/battle_room.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"Battle_music_1","path":"sounds/Battle_music_1/Battle_music_1.yy",},},
     {"id":{"name":"Enter_battle","path":"sounds/Enter_battle/Enter_battle.yy",},},
     {"id":{"name":"enemy_1","path":"sprites/enemy_1/enemy_1.yy",},},
     {"id":{"name":"Fire_idle_1","path":"sprites/Fire_idle_1/Fire_idle_1.yy",},},

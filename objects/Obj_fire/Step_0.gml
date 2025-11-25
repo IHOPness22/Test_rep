@@ -10,13 +10,14 @@ if (dist < follow_radius and dist > stop_radius) {
 }
 else {
     speed = 0;
-	sprite_index = Fire_Idle
+	sprite_index = Fire_Idle;
 }
 
 
 //--------------------------IF ENEMY TOUCHES, TELEPORT TO BATTLE ROOM----
 if (dist <= stop_radius) {
-     if (!instance_exists(Obj_transition)) {
+    global.can_move = false;
+    if (!instance_exists(Obj_transition)) {
         var t = instance_create_layer(x, y, "Instances", Obj_transition);
         t.target_room = battle_room;
     }
