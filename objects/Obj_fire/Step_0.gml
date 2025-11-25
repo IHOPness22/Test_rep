@@ -16,5 +16,8 @@ else {
 
 //--------------------------IF ENEMY TOUCHES, TELEPORT TO BATTLE ROOM----
 if (dist <= stop_radius) {
-    room_goto(battle_room);
-}
+     if (!instance_exists(Obj_transition)) {
+        var t = instance_create_layer(x, y, "Instances", Obj_transition);
+        t.target_room = battle_room;
+    }
+}         

@@ -32,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_transition",
+    "path":"sprites/spr_transition/spr_transition.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

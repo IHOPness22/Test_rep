@@ -16,7 +16,7 @@ frame_count = sprite_get_number(spr);
 frame = 0;
 
 // how fast your sprite animates (adjust this!)
-frame_speed = 0.2;
+frame_speed = 0.40;
 
 // black fade alpha
 alpha = 0;

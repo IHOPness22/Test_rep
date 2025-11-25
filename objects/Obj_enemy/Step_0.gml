@@ -15,4 +15,4 @@ if (dist <= stop_radius) {
         var t = instance_create_layer(x, y, "Instances", Obj_transition);
         t.target_room = battle_room;
     }
-}
+}              
