@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"Script1",
+  "%Name":"Cursor_script",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Script1",
+  "name":"Cursor_script",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

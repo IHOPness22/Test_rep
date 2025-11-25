@@ -7,7 +7,7 @@ if (global.can_move == true) {
 
 
 
-if (_hor != 0 or _ver != 0)
+if (_hor != 0 or _ver != 0 and holding_weapon == false)
 {
     if (_ver > 0) 
         sprite_index = spr_player_walk_down;
@@ -19,7 +19,7 @@ if (_hor != 0 or _ver != 0)
         sprite_index = spr_player_walk_left;
          
 }
-else 
+else if  (_hor == 0 or _ver == 0 and holding_weapon == false)
 {
 	if (sprite_index == spr_player_walk_right)
         sprite_index = spr_player_idle_right;
