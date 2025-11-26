@@ -1,0 +1,2 @@
+// REUSE THIS ANYTIME THERE IS A COLLECTIBLE NEARBY
+global.collected = false;
