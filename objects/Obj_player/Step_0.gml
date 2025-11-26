@@ -94,6 +94,8 @@ if (!global.can_move) {
 
 //If you can collect an item
 if(global.can_collect and !global.collected){
-	if(Ekey)	// when the user preses the E key, it'll collect the item
+	if(Ekey){	// when the user preses the E key, it'll collect the item
 		global.collected = true;
+		audio_play_sound(Collect, 1, false);
+	}
 }

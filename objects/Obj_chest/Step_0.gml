@@ -8,5 +8,3 @@ else
 
 if(global.collected)
 	visible = false;
-
-	

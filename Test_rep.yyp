@@ -49,6 +49,7 @@
     {"id":{"name":"Character_script","path":"scripts/Character_script/Character_script.yy",},},
     {"id":{"name":"Cursor_script","path":"scripts/Cursor_script/Cursor_script.yy",},},
     {"id":{"name":"Battle_music_1","path":"sounds/Battle_music_1/Battle_music_1.yy",},},
+    {"id":{"name":"Collect","path":"sounds/Collect/Collect.yy",},},
     {"id":{"name":"Enter_battle","path":"sounds/Enter_battle/Enter_battle.yy",},},
     {"id":{"name":"Chest","path":"sprites/Chest/Chest.yy",},},
     {"id":{"name":"E","path":"sprites/E/E.yy",},},
