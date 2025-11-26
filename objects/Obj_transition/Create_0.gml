@@ -25,4 +25,5 @@ fade_speed_in  = 0.02;
 
 target_room = noone;
 
+audio_stop_sound(World_music_1);
 audio_play_sound(Enter_battle, 1, false);

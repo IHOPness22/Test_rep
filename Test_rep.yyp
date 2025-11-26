@@ -54,6 +54,7 @@
     {"id":{"name":"Battle_music_1","path":"sounds/Battle_music_1/Battle_music_1.yy",},},
     {"id":{"name":"Collect","path":"sounds/Collect/Collect.yy",},},
     {"id":{"name":"Enter_battle","path":"sounds/Enter_battle/Enter_battle.yy",},},
+    {"id":{"name":"World_music_1","path":"sounds/World_music_1/World_music_1.yy",},},
     {"id":{"name":"Chest","path":"sprites/Chest/Chest.yy",},},
     {"id":{"name":"E","path":"sprites/E/E.yy",},},
     {"id":{"name":"enemy_1","path":"sprites/enemy_1/enemy_1.yy",},},

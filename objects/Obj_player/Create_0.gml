@@ -24,3 +24,4 @@ sprite[3] = spr_player_walk_down;
 shootTimer = 0;
 
 weapon = global.Weapon_list.Tim_gun;
+
