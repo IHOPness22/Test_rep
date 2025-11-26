@@ -5,8 +5,6 @@ downkey  = keyboard_check(ord("S"));
 shootkey = mouse_check_button(mb_left);
 Ekey  = keyboard_check_pressed(ord(("E")));
 
-//when you shoot 
-    //enter the code here 
 
 
 if (global.can_move) {
@@ -98,4 +96,27 @@ if(global.can_collect and !global.collected){
 		global.collected = true;
 		audio_play_sound(Collect, 1, false);
 	}
+}
+
+//shoot the weapon 
+if shootTimer > 0 { shootTimer--}
+if shootkey && shootTimer <= 0
+{
+    //reset the timer
+    shootTimer = weapon.cooldown;
+    
+    //shooting 
+    //create the bullet 
+    var _xOffset = lengthdir_x(weapon.length + weaponOffsetdict, aimDir);
+    var _yOffset = lengthdir_y(weapon.length + weaponOffsetdict, aimDir);
+    
+    
+    //create the correct number of bullets
+    var _bulletInst = instance_create_depth(x + _xOffset, centerY + _yOffset, depth-100,  weapon.bullet);
+    
+    //change the bullets direction
+    with(_bulletInst)
+    {
+        dir = other.aimDir;
+    }
 }

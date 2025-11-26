@@ -9,7 +9,7 @@ holding_weapon = true;
 
 moveDir = 0;
 
-centerYoffset = -5;
+centerYoffset = -6;
 
 
 weaponOffsetdict = 4;
@@ -20,3 +20,7 @@ sprite[0] = spr_player_walk_right;
 sprite[1] = spr_player_walk_up;
 sprite[2] = spr_player_walk_left;
 sprite[3] = spr_player_walk_down;
+
+shootTimer = 0;
+
+weapon = global.Weapon_list.Tim_gun;
