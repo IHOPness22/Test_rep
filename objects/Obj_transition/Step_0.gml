@@ -27,6 +27,7 @@ switch (state) {
         frame -= frame_speed;
         alpha -= fade_speed_in;   // fade back in
         global.can_move = true;
+        global.holding_weapon = true;
 
         if (frame <= 0) {
             frame = 0;

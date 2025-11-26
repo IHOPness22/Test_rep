@@ -1,5 +1,5 @@
 //draw the weapon behind the player
-if aimDir >= 0 && aimDir < 220
+if aimDir >= 0 && aimDir < 220 && global.holding_weapon == true
 {
     draw_my_weapon();
 }
@@ -8,7 +8,7 @@ if aimDir >= 0 && aimDir < 220
 draw_self();
 
 //draw the weapon
-if aimDir >= 220 && aimDir < 360
+if aimDir >= 220 && aimDir < 360 && global.holding_weapon == true
 {
     draw_my_weapon();
 }

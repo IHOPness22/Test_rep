@@ -3,13 +3,13 @@ tilemap = layer_tilemap_get_id("Tiles_Col");
 move_speed = 1;
 global.can_move = true;
 player_data = src_player_stats();
-holding_weapon = player_data.has_weapon;
+global.holding_weapon = player_data.has_weapon;
 
-holding_weapon = true;
 
 moveDir = 0;
 
 centerYoffset = -6;
+centerY = y + centerYoffset;
 
 
 weaponOffsetdict = 4;

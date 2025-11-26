@@ -15,7 +15,7 @@ if (global.can_move) {
     move_and_collide(_hor * move_speed, _ver * move_speed, tilemap, undefined, undefined, move_speed, move_speed);
 
     
-    if (!holding_weapon) {
+    if (!global.holding_weapon) {
         // walking
         if (_hor != 0 || _ver != 0) {
             if (_ver > 0)
@@ -75,11 +75,11 @@ if (global.can_move) {
     depth = -bbox_bottom;
 
     //aim
+    if global.holding_weapon == true 
+    {
     aimDir = point_direction(x, centerY, mouse_x, mouse_y);
+    }
 
-    
-    
-    //if shootkey
     
 }
 
@@ -112,11 +112,15 @@ if shootkey && shootTimer <= 0
     
     
     //create the correct number of bullets
+    if global.holding_weapon == true
+    {    
     var _bulletInst = instance_create_depth(x + _xOffset, centerY + _yOffset, depth-100,  weapon.bullet);
-    
-    //change the bullets direction
+        
+        //change the bullets direction
     with(_bulletInst)
     {
         dir = other.aimDir;
     }
+    }    
+    
 }
