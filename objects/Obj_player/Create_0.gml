@@ -9,7 +9,7 @@ holding_weapon = true;
 
 moveDir = 0;
 
-centerYOffset = -5;
+centerYoffset = -5;
 
 
 weaponOffsetdict = 4;

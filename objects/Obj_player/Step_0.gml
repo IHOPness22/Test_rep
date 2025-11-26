@@ -43,7 +43,7 @@ if (global.can_move) {
     
     else {
         
-        centerY = y + centerYOffset; 
+        centerY = y + centerYoffset; 
 
         // aim at cursor
         aimDir = point_direction(x, centerY, mouse_x, mouse_y);
@@ -72,6 +72,16 @@ if (global.can_move) {
             }
         }
     }
+    
+    depth = -bbox_bottom;
+
+    //aim
+    aimDir = point_direction(x, centerY, mouse_x, mouse_y);
+
+    
+    
+    //if shootkey
+    
 }
 
 // stop anim during transition
