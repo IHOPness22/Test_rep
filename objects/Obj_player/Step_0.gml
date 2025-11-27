@@ -128,7 +128,4 @@ if shootkey && shootTimer <= 0
         dir = other.aimDir;
     }
     }    
-	
-    
-	
 }

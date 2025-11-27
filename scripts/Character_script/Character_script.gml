@@ -10,8 +10,8 @@ function draw_my_weapon()
 
 }
 
-
-var Tim =
+//player struct 
+global.Tim =
 {
     has_weapon : false
 };
@@ -21,3 +21,5 @@ function src_player_stats() {
         has_weapon : false 
     };
 }
+
+

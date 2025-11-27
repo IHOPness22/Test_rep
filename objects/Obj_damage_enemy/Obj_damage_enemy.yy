@@ -1,20 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"Obj_WhiteBullet",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"Obj_damage_enemy",
+  "eventList":[],
   "managed":true,
-  "name":"Obj_WhiteBullet",
+  "name":"Obj_damage_enemy",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
   "parentObjectId":{
-    "name":"Obj_damage_enemy",
-    "path":"objects/Obj_damage_enemy/Obj_damage_enemy.yy",
+    "name":"Obj_damage_parent",
+    "path":"objects/Obj_damage_parent/Obj_damage_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_white_bullet",
-    "path":"sprites/spr_white_bullet/spr_white_bullet.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
