@@ -3,6 +3,7 @@
   "%Name":"Test_rep",
   "AudioGroups":[
     {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"v1","%Name":"Grass_walk","exportDir":"","name":"Grass_walk","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -22,6 +23,7 @@
     {"$GMFolder":"","%Name":"Sequences","folderPath":"folders/Sequences.yy","name":"Sequences","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Shaders","folderPath":"folders/Shaders.yy","name":"Shaders","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sounds","folderPath":"folders/Sounds.yy","name":"Sounds","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Grass","folderPath":"folders/Sounds/Grass.yy","name":"Grass","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Fire","folderPath":"folders/Sprites/Fire.yy","name":"Fire","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Tim","folderPath":"folders/Sprites/Tim.yy","name":"Tim","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -54,6 +56,11 @@
     {"id":{"name":"Battle_music_1","path":"sounds/Battle_music_1/Battle_music_1.yy",},},
     {"id":{"name":"Collect","path":"sounds/Collect/Collect.yy",},},
     {"id":{"name":"Enter_battle","path":"sounds/Enter_battle/Enter_battle.yy",},},
+    {"id":{"name":"Footstep_concrete","path":"sounds/Footstep_concrete/Footstep_concrete.yy",},},
+    {"id":{"name":"Footstep_grass_1","path":"sounds/Footstep_grass_1/Footstep_grass_1.yy",},},
+    {"id":{"name":"Footstep_grass_2","path":"sounds/Footstep_grass_2/Footstep_grass_2.yy",},},
+    {"id":{"name":"Footstep_grass_3","path":"sounds/Footstep_grass_3/Footstep_grass_3.yy",},},
+    {"id":{"name":"Gunshot","path":"sounds/Gunshot/Gunshot.yy",},},
     {"id":{"name":"World_music_1","path":"sounds/World_music_1/World_music_1.yy",},},
     {"id":{"name":"Chest","path":"sprites/Chest/Chest.yy",},},
     {"id":{"name":"E","path":"sprites/E/E.yy",},},

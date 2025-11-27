@@ -6,7 +6,6 @@ shootkey = mouse_check_button(mb_left);
 Ekey  = keyboard_check_pressed(ord(("E")));
 
 
-
 if (global.can_move) {
     var _hor = rightkey - leftkey;
     var _ver = downkey - upkey;
@@ -26,6 +25,7 @@ if (global.can_move) {
                 sprite_index = spr_player_walk_right;
             else if (_hor < 0)
                 sprite_index = spr_player_walk_left;
+		
         }
         // idle
         else { // _hor == 0 and _ver == 0
@@ -37,6 +37,7 @@ if (global.can_move) {
                 sprite_index = spr_player_idle_up;
             else if (sprite_index == spr_player_walk_down)
                 sprite_index = spr_player_idle_down;
+			
         }
     }
     
@@ -122,5 +123,10 @@ if shootkey && shootTimer <= 0
         dir = other.aimDir;
     }
     }    
-    
+	
+    // play a sound effect
+	if(global.holding_weapon)
+		if(shootkey)
+			audio_play_sound(Gunshot, 0, false);
+	
 }
