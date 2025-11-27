@@ -117,6 +117,11 @@ if shootkey && shootTimer <= 0
     {    
     var _bulletInst = instance_create_depth(x + _xOffset, centerY + _yOffset, depth-100,  weapon.bullet);
         
+    //play bullet sound effect ps. might need to put this in a constructor 
+    //in case we add more guns in the future
+	audio_play_sound(Gunshot, 0, false);
+        
+        
         //change the bullets direction
     with(_bulletInst)
     {
@@ -124,9 +129,6 @@ if shootkey && shootTimer <= 0
     }
     }    
 	
-    // play a sound effect
-	if(global.holding_weapon)
-		if(shootkey)
-			audio_play_sound(Gunshot, 0, false);
+    
 	
 }

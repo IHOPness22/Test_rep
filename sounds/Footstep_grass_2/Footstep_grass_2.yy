@@ -22,5 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"Footstep_grass_2.mp3",
-  "volume":0.57,
+  "volume":0.1,
 }
