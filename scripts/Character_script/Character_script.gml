@@ -23,3 +23,14 @@ function src_player_stats() {
 }
 
 
+global.Slime = 
+{
+    name : "Slime",
+    HP : 10,
+    damage : irandom_range(1, 4),
+    min_enemies : 3,
+    max_enemies : 10
+};
+
+
+

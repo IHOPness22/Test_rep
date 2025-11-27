@@ -43,6 +43,7 @@
     {"id":{"name":"Obj_chest","path":"objects/Obj_chest/Obj_chest.yy",},},
     {"id":{"name":"Obj_damage_enemy","path":"objects/Obj_damage_enemy/Obj_damage_enemy.yy",},},
     {"id":{"name":"Obj_damage_parent","path":"objects/Obj_damage_parent/Obj_damage_parent.yy",},},
+    {"id":{"name":"Obj_enemy_spawner","path":"objects/Obj_enemy_spawner/Obj_enemy_spawner.yy",},},
     {"id":{"name":"Obj_enemy","path":"objects/Obj_enemy/Obj_enemy.yy",},},
     {"id":{"name":"Obj_fire","path":"objects/Obj_fire/Obj_fire.yy",},},
     {"id":{"name":"Obj_game","path":"objects/Obj_game/Obj_game.yy",},},
