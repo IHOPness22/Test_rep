@@ -129,3 +129,25 @@ if shootkey && shootTimer <= 0
     }
     }    
 }
+
+
+
+//player can open menu
+if (keyboard_check_pressed(ord("R")) and !menu_open)
+{
+    menu_open = true;
+    global.can_move = false;
+    instance_create_layer(x, y, "Instances", Obj_menu);
+}
+else if (menu_open) {
+    if (keyboard_check_pressed(ord("R"))) {
+        menu_open = false;
+        global.can_move = true;
+        with (Obj_menu) {
+            instance_destroy();
+        }
+    }
+}
+
+
+

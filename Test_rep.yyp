@@ -31,7 +31,9 @@
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[],
-  "IncludedFiles":[],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"earthbound.otf","CopyToMask":-1,"filePath":"datafiles","name":"earthbound.otf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
@@ -39,6 +41,7 @@
   },
   "name":"Test_rep",
   "resources":[
+    {"id":{"name":"fnt_earthbound","path":"fonts/fnt_earthbound/fnt_earthbound.yy",},},
     {"id":{"name":"Collectible_E","path":"objects/Collectible_E/Collectible_E.yy",},},
     {"id":{"name":"Obj_chest","path":"objects/Obj_chest/Obj_chest.yy",},},
     {"id":{"name":"Obj_damage_enemy","path":"objects/Obj_damage_enemy/Obj_damage_enemy.yy",},},
@@ -47,6 +50,7 @@
     {"id":{"name":"Obj_enemy","path":"objects/Obj_enemy/Obj_enemy.yy",},},
     {"id":{"name":"Obj_fire","path":"objects/Obj_fire/Obj_fire.yy",},},
     {"id":{"name":"Obj_game","path":"objects/Obj_game/Obj_game.yy",},},
+    {"id":{"name":"Obj_menu","path":"objects/Obj_menu/Obj_menu.yy",},},
     {"id":{"name":"Obj_player","path":"objects/Obj_player/Obj_player.yy",},},
     {"id":{"name":"Obj_solid","path":"objects/Obj_solid/Obj_solid.yy",},},
     {"id":{"name":"Obj_transition","path":"objects/Obj_transition/Obj_transition.yy",},},
