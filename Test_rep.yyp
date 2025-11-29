@@ -68,6 +68,8 @@
     {"id":{"name":"Footstep_grass_2","path":"sounds/Footstep_grass_2/Footstep_grass_2.yy",},},
     {"id":{"name":"Footstep_grass_3","path":"sounds/Footstep_grass_3/Footstep_grass_3.yy",},},
     {"id":{"name":"Gunshot","path":"sounds/Gunshot/Gunshot.yy",},},
+    {"id":{"name":"Horizontal_menu","path":"sounds/Horizontal_menu/Horizontal_menu.yy",},},
+    {"id":{"name":"Open_menu","path":"sounds/Open_menu/Open_menu.yy",},},
     {"id":{"name":"World_music_1","path":"sounds/World_music_1/World_music_1.yy",},},
     {"id":{"name":"Chest","path":"sprites/Chest/Chest.yy",},},
     {"id":{"name":"E","path":"sprites/E/E.yy",},},
