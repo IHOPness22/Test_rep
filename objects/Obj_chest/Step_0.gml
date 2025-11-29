@@ -7,4 +7,6 @@ else
 	global.can_collect = false;
 
 if(global.collected)
-	visible = false;
+	with(Obj_chest){
+		instance_destroy()
+	}
