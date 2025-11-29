@@ -4,6 +4,7 @@ var follow_radius = 60;
 var stop_radius = 16;
 var slime = global.Slime;
 
+
 //this is only for chase in overworld
 if !global.holding_weapon
 {
@@ -29,11 +30,11 @@ if (dist <= stop_radius) {
 // collision with player attack / damage object
 if global.holding_weapon
 {
+    // If enemy touches player 
 if place_meeting(x, y, Obj_damage_enemy)
 {
     var hit = instance_place(x, y, Obj_damage_enemy);
     HP -= hit.damage;
-
     instance_destroy(hit);
 }
 
@@ -41,7 +42,31 @@ if place_meeting(x, y, Obj_damage_enemy)
 if (HP <= 0)
 {
     instance_destroy();
-}
+} 
+    
+    
+//Enemy AI
+     
+    if (stop_timer > 0) 
+    {
+        speed = 0;
+        stop_timer--;
+        
+    }
+    else {
+        if (run_timer > 0)
+        {
+            move_towards_point(Obj_player.x, Obj_player.y, 1);
+            run_timer--;
+        }
+        else {
+        	run_time = irandom_range(3, 5);
+            run_timer = run_time * room_speed;
+            stop_time = irandom_range(3, 5);
+            stop_timer = stop_time * room_speed;
+        }
+    }           
+    
 
 }
              
