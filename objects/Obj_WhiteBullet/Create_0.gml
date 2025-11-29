@@ -6,5 +6,5 @@ xspd = 0;
 yspd = 0;
 
 //cleanup
-maxDist = 240;
+maxDist = 500;
 destroy = false;

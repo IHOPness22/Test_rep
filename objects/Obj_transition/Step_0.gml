@@ -9,6 +9,10 @@ switch (state) {
             alpha = 1;
 
             if (room_exists(target_room)) {
+                with (Obj_player) {
+                    x = 363;
+                    y = 366;
+                }
                 room_goto(target_room);
             }
 
