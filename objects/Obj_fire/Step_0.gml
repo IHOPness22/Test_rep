@@ -3,7 +3,7 @@ var dist = point_distance(x,y,Obj_player.x, Obj_player.y)
 var follow_radius = 45;
 var stop_radius = 22;
 
-if (dist < follow_radius and dist > stop_radius) { 
+if (dist < follow_radius and dist > stop_radius and global.can_move) { 
     move_towards_point(Obj_player.x, Obj_player.y, 1);
 	sprite_index = Fire_idle_1;
 	

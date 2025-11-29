@@ -7,8 +7,8 @@ var slime = global.Slime;
 //this is only for chase in overworld
 if !global.holding_weapon
 {
-if (dist < follow_radius and dist > stop_radius) { 
-    move_towards_point(Obj_player.x, Obj_player.y, 1);
+	if (dist < follow_radius and dist > stop_radius and global.can_move) { 
+		move_towards_point(Obj_player.x, Obj_player.y, 1);
 }
 else {
     speed = 0;
