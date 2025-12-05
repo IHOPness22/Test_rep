@@ -1,3 +1,4 @@
+#region 
 //--------------------------ENEMY AI-------------------------------------
 var dist = point_distance(x,y,Obj_player.x, Obj_player.y)
 var follow_radius = 60;
@@ -44,9 +45,10 @@ if (HP <= 0)
     instance_destroy();
 } 
     
+#endregion    
     
 //Enemy AI
-     
+/*     
     if (stop_timer > 0) 
     {
         speed = 0;
@@ -66,7 +68,73 @@ if (HP <= 0)
             stop_timer = stop_time * room_speed;
         }
     }           
-    
+   */ 
 
+
+
+
+
+
+//Experimental state machines
+
+switch (state) {
+    case ENEMY_STATE.STOP:
+        if (stop_timer > 0)
+        {
+            speed = 0;
+            stop_timer--;
+        }
+        else {
+        state = ENEMY_STATE.MOVE;
+        }
+        break;
+    case ENEMY_STATE.MOVE: 
+        if (run_timer > 0)
+        {
+            move_towards_point(Obj_player.x, Obj_player.y, 1);
+            run_timer--;
+        } 
+        else {
+            run_time = irandom_range(3, 5);
+            run_timer = run_time * room_speed;
+            stop_time = irandom_range(3, 5);
+            stop_timer = stop_time * room_speed;
+            state = ENEMY_STATE.DASH;
+        }
+        break; 
+    case ENEMY_STATE.DASH:
+        if (jumpTimer == 0) {
+            hop_speed = irandom_range(3,4);
+            jumpTimer = irandom_range(20, 30);
+            var jump_direction = point_direction(x, y, Obj_player.x, Obj_player.y)
+            direction = jump_direction;
+            speed = hop_speed;
+        }
+        else {
+            jumpTimer--;
+            if (jumpTimer <= 0) {
+                speed = 0;
+                var decide_state = irandom_range(1,2);
+                if decide_state == 1 {
+                    state = ENEMY_STATE.STOP;
+                }
+                else if decide_state == 2 {
+                    state = ENEMY_STATE.MOVE;
+                }
+            }
+        } 
+        break;  
+            
+            
+            
+             
+        
+    
 }
+    
+    
+}
+              
+        
+
              
