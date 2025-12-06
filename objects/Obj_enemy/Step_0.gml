@@ -56,7 +56,7 @@ if (HP <= 0)
         
     }
     else {
-        if (run_timer > 0 and global.can_move)
+        if (run_timer > 0)
         {
             move_towards_point(Obj_player.x, Obj_player.y, 1);
             run_timer--;

@@ -1,5 +1,8 @@
-GrassEff = [Footstep_grass_1, Footstep_grass_2, Footstep_grass_3];
+GrassEff = array_create(3);
 var num1 = random_range(0,2);
+array_insert(GrassEff, 0, Footstep_grass_1);
+array_insert(GrassEff, 1, Footstep_grass_2);
+array_insert(GrassEff, 2, Footstep_grass_3);
 
 //-------------ADD A NEW GLOBAL VARIABLE THAT TRACKS IF YOUR ON GRASS OR NOT LATER
 //------------- FOR NOW THIS WORKS
