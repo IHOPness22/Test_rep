@@ -45,6 +45,34 @@ if (HP <= 0)
     instance_destroy();
 } 
     
+    
+    
+//going to experiment with this code later to ensure
+//collsions are to a tea with game logic        
+/*    
+    if instance_exists(oPlayer)
+    {
+        dir = point_direction(x, y, Obj_player.x, Obj_player.y);
+    }
+    
+    xspd = lengthdir_x(speed, dir);
+    yspd = lengthdir_y(speed, dir);
+  
+    
+    
+//collision  
+    if place_meeting(x + xspd, y, Obj_solid)
+    {
+        xspd = 0;
+    } 
+    if place_meeting(x, y + yspd, Obj_solid)
+    {
+        yspd = 0;
+    } 
+ */   
+           
+
+    
 #endregion    
     
 //Enemy AI

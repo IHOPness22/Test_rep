@@ -9,6 +9,9 @@ direction = 0;
 hop_speed = irandom_range(3,4);
 jumpTimer = irandom_range(20, 30);
 
+dir = 0;
+xspd = 0;
+yspd = 0;
 
 enum ENEMY_STATE {
     STOP,

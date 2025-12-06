@@ -4,6 +4,7 @@ move_speed = 1;
 global.can_move = true;
 player_data = src_player_stats();
 global.holding_weapon = player_data.has_weapon;
+HP = 100;
 
 
 moveDir = 0;
