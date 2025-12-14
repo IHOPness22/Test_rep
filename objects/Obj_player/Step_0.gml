@@ -133,16 +133,16 @@ if shootkey && shootTimer <= 0
 
 
 //player can open menu
-if (keyboard_check_pressed(ord("R")) and !menu_open)
+if (keyboard_check_pressed(ord("R")) and !global.menu_open and global.menu_state == MENU_STATE.MAIN)
 {
-    menu_open = true;
+    global.menu_open = true;
     global.can_move = false;
     instance_create_layer(x, y, "Instances", Obj_menu);
     audio_play_sound(Open_menu, 1, false);
 }
-else if (menu_open) {
+else if (global.menu_open) {
     if (keyboard_check_pressed(ord("R"))) {
-        menu_open = false;
+        global.menu_open = false;
         global.can_move = true;
         audio_play_sound(Open_menu, 1, false);
         with (Obj_menu) {
@@ -150,6 +150,7 @@ else if (menu_open) {
         }
     }
 }
+
 
 
 

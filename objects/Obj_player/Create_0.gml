@@ -26,5 +26,7 @@ shootTimer = 0;
 
 weapon = global.Weapon_list.Tim_gun;
 
-menu_open = false;
+global.menu_open = false;
+
+global.menu_state = MENU_STATE.MAIN;
 
