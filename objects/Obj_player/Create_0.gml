@@ -30,3 +30,7 @@ global.menu_open = false;
 
 global.menu_state = MENU_STATE.MAIN;
 
+
+//damage 
+get_damage_create(10);
+

@@ -5,6 +5,12 @@ downkey  = keyboard_check(ord("S"));
 shootkey = mouse_check_button(mb_left);
 Ekey  = keyboard_check_pressed(ord(("E")));
 
+//get damaged
+if global.holding_weapon
+{
+    get_damaged(Obj_damage_player);
+}
+
 
 if (global.can_move) {
     var _hor = rightkey - leftkey;

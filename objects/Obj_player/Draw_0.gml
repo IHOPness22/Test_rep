@@ -12,3 +12,6 @@ if aimDir >= 220 && aimDir < 360 && global.holding_weapon == true
 {
     draw_my_weapon();
 }
+
+//draw hp as a number
+draw_text_colour(x, y, string(HP),c_green, c_green, c_green, c_green, true);

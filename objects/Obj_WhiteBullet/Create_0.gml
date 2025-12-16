@@ -8,3 +8,5 @@ yspd = 0;
 //cleanup
 maxDist = 500;
 destroy = false;
+//if bullets go through enemies?
+enemyDestroy = true;

@@ -6,6 +6,11 @@ x += xspd;
 y += yspd;
 
 //cleanup
+
+//hit confirm destroy
+if hit_confirm == true && enemyDestroy == true
+{ destroy = true;};
+
 //destroy
 if destroy == true { instance_destroy();};
     
