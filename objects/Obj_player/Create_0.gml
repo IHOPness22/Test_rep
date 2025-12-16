@@ -32,5 +32,5 @@ global.menu_state = MENU_STATE.MAIN;
 
 
 //damage 
-get_damage_create(10);
+get_damage_create(10, true);
 

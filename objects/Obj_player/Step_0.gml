@@ -8,7 +8,7 @@ Ekey  = keyboard_check_pressed(ord(("E")));
 //get damaged
 if global.holding_weapon
 {
-    get_damaged(Obj_damage_player);
+    get_damaged(Obj_damage_player, true);
 }
 
 

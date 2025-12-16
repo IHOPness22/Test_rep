@@ -22,6 +22,6 @@ enum ENEMY_STATE {
 state = ENEMY_STATE.STOP;
 
 //create a damage list 
-damageList = ds_list_create();
+get_damage_create(HP, false);
 
       
