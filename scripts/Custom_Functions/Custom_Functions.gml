@@ -29,12 +29,25 @@ function get_damaged(_damageObj, _iframes = false)
     if _iframes == true && iframeTimer > 0
     {
         iframeTimer--;
+        //keep flickering player sprite unitl invincibility is over
+        if iframeTimer mod 5 == 0
+        {
+            if image_alpha == 1
+            {
+                image_alpha = 0;
+            } else {
+                image_alpha = 1;
+            }
+        }
         exit;
-    }    
+    } 
+    
+    image_alpha = 1;   
         
         
     // If enemy touches player 
     if (!place_meeting(x, y, _damageObj)) exit;
+    
     
     
     //OG damage code, 

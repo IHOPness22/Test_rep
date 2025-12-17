@@ -8,7 +8,18 @@ Ekey  = keyboard_check_pressed(ord(("E")));
 //get damaged
 if global.holding_weapon
 {
-    get_damaged(Obj_damage_player, true);
+    
+    if (!_iframes and _iframeTimer <= 0) {
+        get_damaged(Obj_damage_parent, true);
+        var dir = point_direction(Obj_enemy_parent.x, Obj_enemy_parent.y, Obj_player.x, Obj_player.y);
+        Obj_player.x += lengthdir_x(10, dir);
+        Obj_player.y += lengthdir_y(10, dir);
+        _iframes = true;
+        _iframeTimer = 90;
+    }
+    if (_iframes) { _iframeTimer--;}
+    
+    //Knockback for the bois
 }
 
 
