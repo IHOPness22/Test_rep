@@ -33,7 +33,6 @@ if global.holding_weapon
 {
     get_damaged(Obj_damage_enemy, false);
 
-
 // death check
 if (HP <= 0)
 {
@@ -128,13 +127,20 @@ switch (state) {
         break; 
     case ENEMY_STATE.DASH:
         if (jumpTimer == 0) {
+            hit_player = false;
             hop_speed = irandom_range(3,4);
-            jumpTimer = irandom_range(20, 30);
+            jumpTimer = irandom_range(10, 20);
             var jump_direction = point_direction(x, y, Obj_player.x, Obj_player.y)
             direction = jump_direction;
             speed = hop_speed;
         }
         else {
+            if (!hit_player && place_meeting(x, y, Obj_player)) {
+                get_damaged(Obj_damage_enemy, false);
+                hit_player = true;
+                state = ENEMY_STATE.STOP;
+                hit_player = false;
+            } 
             jumpTimer--;
             if (jumpTimer <= 0) {
                 speed = 0;

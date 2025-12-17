@@ -25,5 +25,6 @@ state = ENEMY_STATE.STOP;
 get_damage_create(HP, false);
 
 can_iframes = false;
+hit_player = false;
 
       
