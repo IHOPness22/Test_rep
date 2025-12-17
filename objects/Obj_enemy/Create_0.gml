@@ -24,4 +24,6 @@ state = ENEMY_STATE.STOP;
 //create a damage list 
 get_damage_create(HP, false);
 
+can_iframes = false;
+
       
