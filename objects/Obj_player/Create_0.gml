@@ -35,3 +35,5 @@ global.menu_state = MENU_STATE.MAIN;
 get_damage_create(10, true);
 can_iframes = true;
 
+dashTime = 60;
+dashCooldown = 60;

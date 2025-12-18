@@ -4,6 +4,7 @@ upkey    = keyboard_check(ord("W"));
 downkey  = keyboard_check(ord("S"));
 shootkey = mouse_check_button(mb_left);
 Ekey  = keyboard_check_pressed(ord(("E")));
+space = keyboard_check_pressed(vk_space);
 
 //get damaged
 if global.holding_weapon
@@ -88,6 +89,21 @@ if (global.can_move) {
     {
     aimDir = point_direction(x, centerY, mouse_x, mouse_y);
     }
+    
+    //dash movement for player (adding a roll animation later)
+    /*if (global.holding_weapon) {
+        if (space && dashTime >= 60)
+        {
+           move_speed = 2;
+           dashTime--; 
+        }
+        if (dashTime <= 0 )
+        {
+            dashTime++
+        }
+    
+    }  */       
+    
 
     
 }
