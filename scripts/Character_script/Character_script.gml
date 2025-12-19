@@ -6,7 +6,9 @@ function draw_my_weapon()
 //{
 //    _weaponYscl = -1;
 //}
-    draw_sprite_ext(spr_tim_gun, 0, x, centerY,1, _weaponYscl, aimDir,c_white, 1);
+    var weaponY =y + centerYoffset;
+    
+    draw_sprite_ext(spr_tim_gun, 0, x, weaponY,1, _weaponYscl, aimDir,c_white, 1);
 
 }
 

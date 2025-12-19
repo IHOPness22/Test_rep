@@ -26,6 +26,7 @@ shootTimer = 0;
 
 weapon = global.Weapon_list.Tim_gun;
 
+
 global.menu_open = false;
 
 global.menu_state = MENU_STATE.MAIN;
@@ -35,7 +36,7 @@ global.menu_state = MENU_STATE.MAIN;
 get_damage_create(10, true);
 can_iframes = true;
 
-dashTimer = 60;
+dashTimer = 30;
 cooldown_timer = 60;
 
 enum MOVEMENT_STATE {
@@ -45,3 +46,4 @@ enum MOVEMENT_STATE {
 }
 
 state = MOVEMENT_STATE.MOVE;
+

@@ -53,7 +53,10 @@ if (global.can_move) {
     
     else {
         
-        centerY = y + centerYoffset; 
+        
+        if (state == MOVEMENT_STATE.MOVE || state == MOVEMENT_STATE.COOLDOWN || state = MOVEMENT_STATE.DASH) {
+        centerY = y + centerYoffset;
+        } 
 
         // aim at cursor
         aimDir = point_direction(x, centerY, mouse_x, mouse_y);
@@ -98,16 +101,32 @@ if (global.can_move) {
     //dash movement for player (adding a roll animation later)
     if (global.holding_weapon && space && state == MOVEMENT_STATE.MOVE)  {
         state = MOVEMENT_STATE.DASH
-        dashTimer = 60;
+        dashTimer = 30;
         dash_face = face;
         dash_angle = face * 90;
-        dash_speed = 2;
+        dash_speed = 3;
         dash_dx = lengthdir_x(dash_speed, dash_angle);
         dash_dy = lengthdir_y(dash_speed, dash_angle);
         
     }   
     if (state == MOVEMENT_STATE.DASH) { 
         move_and_collide(dash_dx, dash_dy, tilemap, undefined, undefined, dash_speed, dash_speed);
+        dashTimer--;
+    }
+    if (dashTimer <= 0 && state == MOVEMENT_STATE.DASH) {
+        state = MOVEMENT_STATE.COOLDOWN;
+        cooldown_timer = 60;
+        shootTimer = 2;
+    }    
+    if (state == MOVEMENT_STATE.COOLDOWN) {
+        weapon_hide_timer = 0;
+        cooldown_timer--;
+    } 
+    if (cooldown_timer <= 0 and state == MOVEMENT_STATE.COOLDOWN) {
+        state = MOVEMENT_STATE.MOVE;
+        dashTimer = 60;
+    }
+
 
     //i need a fuckin break
     /*    if dash_face = 0 { x += 10; }
@@ -147,7 +166,8 @@ if(global.can_collect and !global.collected){
 	}
 }
 
-//shoot the weapon 
+//shoot the weapon
+if state != MOVEMENT_STATE.DASH { 
 if shootTimer > 0 { shootTimer--}
 if shootkey && shootTimer <= 0
 {
@@ -177,7 +197,7 @@ if shootkey && shootTimer <= 0
     }
     }    
 }
-
+}
 
 
 //player can open menu
