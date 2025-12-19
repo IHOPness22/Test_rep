@@ -6,9 +6,10 @@ shootkey = mouse_check_button(mb_left);
 Ekey  = keyboard_check_pressed(ord(("E")));
 space = keyboard_check_pressed(vk_space);
 
+
+if (state == MOVEMENT_STATE.MOVE || state == MOVEMENT_STATE.COOLDOWN) {
 //get damaged
-if global.holding_weapon
-{
+if global.holding_weapon  {
     get_damaged(Obj_enemy_parent, true);
     
     //Knockback for the bois (fuck)
@@ -89,24 +90,47 @@ if (global.can_move) {
     {
     aimDir = point_direction(x, centerY, mouse_x, mouse_y);
     }
+}
+}
+
+
     
     //dash movement for player (adding a roll animation later)
-    /*if (global.holding_weapon) {
-        if (space && dashTime >= 60)
-        {
-           move_speed = 2;
-           dashTime--; 
-        }
-        if (dashTime <= 0 )
-        {
-            dashTime++
-        }
-    
-    }  */       
+    if (global.holding_weapon && space && state == MOVEMENT_STATE.MOVE)  {
+        state = MOVEMENT_STATE.DASH
+        dashTimer = 60;
+        dash_face = face;
+        dash_angle = face * 90;
+        dash_speed = 2;
+        dash_dx = lengthdir_x(dash_speed, dash_angle);
+        dash_dy = lengthdir_y(dash_speed, dash_angle);
+        
+    }   
+    if (state == MOVEMENT_STATE.DASH) { 
+        move_and_collide(dash_dx, dash_dy, tilemap, undefined, undefined, dash_speed, dash_speed);
+
+    //i need a fuckin break
+    /*    if dash_face = 0 { x += 10; }
+        
+        move_speed = 2;
+        dashTimer--;
+        
+    }      
+    if (dashTimer <= 0 && state == MOVEMENT_STATE.DASH) {
+        state = MOVEMENT_STATE.COOLDOWN
+        move_speed = 1;
+    }
+    if (state == MOVEMENT_STATE.COOLDOWN) {
+        dashTimer++;
+    }
+    if (dashTimer >= 60 && state == MOVEMENT_STATE.COOLDOWN) {
+        state = MOVEMENT_STATE.MOVE;
+        dashTimer = 60;
+    }
+   */ 
     
 
     
-}
 
 // stop anim during transition
 if (!global.can_move) {

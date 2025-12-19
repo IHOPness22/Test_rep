@@ -35,5 +35,13 @@ global.menu_state = MENU_STATE.MAIN;
 get_damage_create(10, true);
 can_iframes = true;
 
-dashTime = 60;
-dashCooldown = 60;
+dashTimer = 60;
+cooldown_timer = 60;
+
+enum MOVEMENT_STATE {
+    MOVE,
+    DASH,
+    COOLDOWN
+}
+
+state = MOVEMENT_STATE.MOVE;
